@@ -8,56 +8,68 @@
       <a target="_blank" href="https://twitter.com/ThomasTritscher">Twitter</a>
     </li>
     <li>
-      <a target="_blank" href="https://github.com/ThomasTritscher">Github</a>        
+      <a target="_blank" href="https://github.com/ThomasTritscher">Github</a>
     </li>
     <li>
-      <a target="_blank" href="https://www.linkedin.com/in/thomas-tritscher-40ab14213/">LinkedIn</a>        
+      <a target="_blank" href="https://www.linkedin.com/in/thomas-tritscher-40ab14213/">LinkedIn</a>
     </li>
     <li>
-      <a target="_blank" href="https://www.codepen.io/thomastritscher">CodePen</a>        
+      <a target="_blank" href="https://www.codepen.io/thomastritscher">CodePen</a>
     </li>
   </ul>
 </nav>
-<menu *ngIf="!darkMode" (click)="overlayMenu()">
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-</menu>
-<menu *ngIf="darkMode" (click)="closeMenu()">
-  <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
-  <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
-</menu>
+@if (!darkMode) {
+  <menu (click)="overlayMenu()">
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+  </menu>
+}
+@if (darkMode) {
+  <menu (click)="closeMenu()">
+    <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : defaultColor}" class="dot"></span>
+    <span [ngStyle]="{'background' : accentColor}" class="dot"></span>
+  </menu>
+}
 <div id="m-m-overlay" class="main-menu" [ngStyle]="{'zIndex' : z_inactive}">
   <ul>
-    <li *ngIf="darkMode" [ngStyle]= "{'animation' : 'fade-from-left 1s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
-      <span>01</span>
-      <a routerLink="/projects">projects</a>
-    </li>
-    <li *ngIf="darkMode" [ngStyle]= "{'animation' : 'fade-from-left 1.2s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
-      <span>02</span>
-      <a routerLink="/skills">skills</a>
-    </li>
-    <li *ngIf="darkMode" [ngStyle]= "{'animation' : 'fade-from-left 1.3s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
-      <span>03</span>
-      <a routerLink="/person">person</a>
-    </li>
-    <li *ngIf="darkMode" [ngStyle]= "{'animation' : 'fade-from-left 1.4s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
-      <span>04</span>
-      <a routerLink="/contact">say hello!</a>
-    </li>
+    @if (darkMode) {
+      <li [ngStyle]= "{'animation' : 'fade-from-left 1s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
+        <span>01</span>
+        <a routerLink="/projects">projects</a>
+      </li>
+    }
+    @if (darkMode) {
+      <li [ngStyle]= "{'animation' : 'fade-from-left 1.2s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
+        <span>02</span>
+        <a routerLink="/skills">skills</a>
+      </li>
+    }
+    @if (darkMode) {
+      <li [ngStyle]= "{'animation' : 'fade-from-left 1.3s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
+        <span>03</span>
+        <a routerLink="/person">person</a>
+      </li>
+    }
+    @if (darkMode) {
+      <li [ngStyle]= "{'animation' : 'fade-from-left 1.4s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
+        <span>04</span>
+        <a routerLink="/contact">say hello!</a>
+      </li>
+    }
   </ul>
 </div>
 
