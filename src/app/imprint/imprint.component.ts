@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy,
     selector: 'app-imprint',
     templateUrl: './imprint.component.html',
     styleUrls: ['./imprint.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ImprintComponent{

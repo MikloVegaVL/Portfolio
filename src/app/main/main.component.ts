@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { LayerChangeService } from '../services/layer-change.service';
 import { TransformBGService } from '../services/transform-bg.service';
 import { TransitionBgService } from '../services/transition-bg.service';
@@ -23,6 +23,7 @@ import {
             ]),
         ]),
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 
