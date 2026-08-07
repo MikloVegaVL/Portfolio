@@ -1,5 +1,4 @@
-import { getTranslationDeclStmts } from '@angular/compiler/src/render3/view/template';
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   trigger,
   style,
