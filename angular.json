@@ -77,18 +77,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "thomastritscher:build"
+            "buildTarget": "thomastritscher:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "thomastritscher:build:production"
+              "buildTarget": "thomastritscher:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "thomastritscher:build"
+            "buildTarget": "thomastritscher:build"
           }
         },
         "test": {
