@@ -12,17 +12,18 @@ import {
 
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
-  animations: [
-    trigger('load', [
-      transition(':enter', [
-        style({ opacity: 1 }),
-        animate('2.5s ease-in-out', style({ opacity: 0 }))
-      ]),
-    ]),
-  ]
+    selector: 'app-main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.scss'],
+    animations: [
+        trigger('load', [
+            transition(':enter', [
+                style({ opacity: 1 }),
+                animate('2.5s ease-in-out', style({ opacity: 0 }))
+            ]),
+        ]),
+    ],
+    standalone: false
 })
 
 export class MainComponent implements OnInit {

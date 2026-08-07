@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-outer-frame',
-  templateUrl: './outer-frame.component.html',
-  styleUrls: ['./outer-frame.component.scss']
+    selector: 'app-outer-frame',
+    templateUrl: './outer-frame.component.html',
+    styleUrls: ['./outer-frame.component.scss'],
+    standalone: false
 })
 export class OuterFrameComponent implements OnInit {
 
