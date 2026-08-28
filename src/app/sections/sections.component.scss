@@ -141,7 +141,7 @@
   display      : grid;
   position     : absolute;
   bottom       : 0;
-  background   : #dbdbda;
+  background   : var(--secondbgcolor);
   border-radius: 24px;
   transition   : all 1.2s cubic-bezier(.87, 0, .3, 1.04);
 }
@@ -152,7 +152,7 @@
   display      : grid;
   position     : absolute;
   bottom       : 0;
-  background   : #dbdbda;
+  background   : var(--secondbgcolor);
   border-radius: 24px;
   transition   : all 1.2s cubic-bezier(.87, 0, .3, 1.04);
 }
@@ -179,17 +179,12 @@
     font-size: 26vw;
     margin   : 60px 0 0;
   }
-
-
-
 }
 
 .s1-h1-wrapper {
   display : block;
   overflow: hidden;
   position: relative;
-
-
 }
 
 .s1-h1-wrapper-e {
