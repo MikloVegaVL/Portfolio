@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Thomas Tritscher logo">
+  <path fill="#FF3B1D" d="M0,0 L240,0 L300,60 L300,300 L60,300 L0,240 Z" />
+
+  <text x="28" y="42" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="1">TM</text>
+
+  <text x="130" y="236" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">thomas</text>
+  <text x="130" y="278" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">tritscher</text>
+</svg>
