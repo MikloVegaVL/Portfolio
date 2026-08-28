@@ -3,7 +3,10 @@
     <app-outer-frame></app-outer-frame>
   </div>
   <section [ngStyle]="{'opacity' : layer.img_opacity}" class="img-wrap">
-    <img src="/assets/img/face.png" alt="Front face image by Thomas Tritscher">
+    <div class="hero-frame">
+      <div class="hero-seam"></div>
+      <img src="/assets/img/hero-portrait.jpg" alt="Portrait of Thomas Tritscher dissolving into a code overlay">
+    </div>
   </section>
   <div class="bg-wrap">
     <div [ngStyle]="{ 'transform': transformBg.valueBg }" class="bg-left">

@@ -1,6 +1,7 @@
 //color-variables
 :root {
   --primarycolor     : #009688;
+  --secondbgcolor    : #dbdbda;
   --lightprimarycolor: #B2DFDB;
   --darkprimarycolor : #00796B;
   --accentcolor      : #FF5722;
@@ -26,6 +27,7 @@ body {
   font-size             : 16px;
   font-weight           : 300;
   color                 : var(--secondarytext);
+  background-color      : var(--secondbgcolor);
   margin                : 0;
   padding               : 0;
   overscroll-behavior   : none;
@@ -99,12 +101,12 @@ ul {
 
   &::-webkit-scrollbar{
     width: 8px;
-    
+
   }
   &::-webkit-scrollbar-track{
     background: rgb(189, 189, 189,0.4);
     ;
-    
+
   }
   &::-webkit-scrollbar-thumb{
     background: var(--secondarytext);
