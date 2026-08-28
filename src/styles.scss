@@ -16,6 +16,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   margin                : 0;
   font-family           : 'Montserrat', sans-serif;
@@ -24,6 +28,7 @@ body {
   color                 : var(--secondarytext);
   margin                : 0;
   padding               : 0;
+  overscroll-behavior   : none;
   -webkit-font-smoothing: antialiased;
 }
 
