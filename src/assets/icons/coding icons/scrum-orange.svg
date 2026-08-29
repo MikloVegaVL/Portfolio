@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Scrum" fill="none" stroke="#FF5722" stroke-width="6" stroke-linecap="round">
+  <path d="M14 32a18 18 0 0 1 30-13"/>
+  <path d="M50 32a18 18 0 0 1-30 13"/>
+  <path d="M44 12l4 8-9-1" fill="#FF5722" stroke="none"/>
+  <path d="M20 52l-4-8 9 1" fill="#FF5722" stroke="none"/>
+</svg>

@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="wrapper">
-  <div class="scroll-container">
+  <div #scrollContainer class="scroll-container">
     <div class="scroll-content">
       <div class="wrapper_inner">
         <hr class="spacer100">
@@ -24,129 +24,326 @@
           </article>
         </section>
         <section>
-          <ul>
-            <li>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/html-orange.png" alt="">
-              </div>
-              <div class="p-wrap fadeIn show-right">
-                <p>HTML stands for Hypertext Markup Language. It allows the user to create and structure sections,
-                  paragraphs, headings, links, and blockquotes for web pages and applications.</p>
-              </div>
-            </li>
-            <li>
-              <div class="p-wrap fadeIn show-left">
-                <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen,
-                  paper, or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all
-                  at once.</p>
-              </div>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/css-orange.png" alt="">
-              </div>
-            </li>
-            <li>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/javascript-orange.png" alt="">
-              </div>
-              <div class="p-wrap fadeIn show-right">
-                <p>JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a
-                  part of web pages, whose implementations allow client-side script to interact with the user and make
-                  dynamic pages. It is an interpreted programming language with object-oriented capabilities.</p>
-              </div>
-            </li>
-            <li>
-              <div class="p-wrap fadeIn show-left">
-                <p>Node. js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node. js uses an
-                  event-driven, non-blocking I/O model that makes it lightweight and efficient.</p>
-              </div>
+          <div class="skills-groups">
+            <div class="skill-group">
+              <h2 class="skill-group-title">Languages</h2>
+              <ul>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/html-orange.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>HTML5 is the latest evolution of the standard that structures and presents content on the web.
+                      It adds semantic elements and native audio, video, canvas and local-storage APIs, cutting the
+                      need for third-party plugins.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>CSS3 is the modern version of Cascading Style Sheets, adding flexbox, grid, animations and
+                      custom properties. It gives fine-grained control over layout, responsiveness and visual design
+                      without extra scripting.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/css-orange.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/javascript-orange.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a
+                      part of web pages, whose implementations allow client-side script to interact with the user and make
+                      dynamic pages. It is an interpreted programming language with object-oriented capabilities.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>TypeScript is a strongly typed superset of JavaScript that compiles to plain JavaScript. It
+                      adds static types and interfaces, catching errors at compile time and making larger codebases
+                      easier to maintain.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/typescript-orange.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/python-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Python is a high-level, general-purpose programming language known for its readable syntax.
+                      It's widely used for scripting, automation, data work and backend development.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
+            <div class="skill-group">
+              <h2 class="skill-group-title">Frameworks &amp; Libraries</h2>
+              <ul>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/angular-orange.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Angular is a platform and framework for building single-page client applications with HTML
+                      and TypeScript. Modern Angular (v20+) builds on standalone components and signals, letting
+                      components define views that update efficiently with your program's data.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>Node. js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node. js uses an
+                      event-driven, non-blocking I/O model that makes it lightweight and efficient.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/node-orange.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/bootstrap-orange.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Bootstrap is the most popular HTML, CSS and JavaScript framework for developing a responsive and mobile
+                      friendly website. It is absolutely free to download and use. It is a front-end framework used for easier
+                      and faster web development. ... It can also use JavaScript plug-ins.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>Material design is a design language developed by Google which, at its core, is an extremely
+                      sophisticated and well defined set of guidelines to help both designers and end users replicate Google's
+                      work as well as explain why things in Google look and respond the way they do.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/md-orange.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/tailwind-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Tailwind CSS is a utility-first CSS framework that provides low-level classes to build custom
+                      designs directly in markup, without writing traditional CSS. It speeds up styling while keeping
+                      design systems consistent.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+                    </p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/sass-orange.png" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/node-orange.png" alt="">
-              </div>
-            </li>
-            <li>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/git-orange.png" alt="">
-              </div>
-              <div class="p-wrap fadeIn show-right">
-                <p>Git is the most commonly used version control system. Git tracks the changes you make to files, so you
-                  have a record of what has been done, and you can revert to specific versions should you ever need to.
-                  Git also makes collaboration easier, allowing changes by multiple people to all be merged into one
-                  source.</p>
-              </div>
-            </li>
-            <li>
-              <div class="p-wrap fadeIn show-left">
-                <p>GitHub is a code hosting platform for version control and collaboration. It lets you and others work
-                  together on projects from anywhere. ... You'll create your own Hello World repository and learn GitHub's
-                  Pull Request workflow, a popular way to create and review code.</p>
-              </div>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/github-orange.png" alt="">
-              </div>
-            </li>
-            <li>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/bootstrap-orange.png" alt="">
-              </div>
-              <div class="p-wrap fadeIn show-right">
-                <p>Bootstrap is the most popular HTML, CSS and JavaScript framework for developing a responsive and mobile
-                  friendly website. It is absolutely free to download and use. It is a front-end framework used for easier
-                  and faster web development. ... It can also use JavaScript plug-ins.</p>
-              </div>
-            </li>
-            <li>
-              <div class="p-wrap fadeIn show-left">
-                <p>Material design is a design language developed by Google which, at its core, is an extremely
-                  sophisticated and well defined set of guidelines to help both designers and end users replicate Google's
-                  work as well as explain why things in Google look and respond the way they do.</p>
-              </div>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/md-orange.png" alt="">
-              </div>
-            </li>
-            <li>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/angular-orange.png" alt="">
-              </div>
-              <div class="p-wrap fadeIn show-right">
-                <p>Angular is a platform and framework for building single-page client applications using HTML and
-                  TypeScript. Angular is written in TypeScript. ... Components define views, which are sets of screen
-                  elements that Angular can choose among and modify according to your program logic and data.</p>
-              </div>
-            </li>
-            <li>
-              <div class="p-wrap fadeIn show-left">
-                <p>Firebase is a Backend-as-a-Service — BaaS — that started as a YC11 startup and grew up into a
-                  next-generation app-development platform on Google Cloud Platform. ... Firebase frees developers to
-                  focus crafting fantastic user experiences. You don't need to manage servers. You don't need to write
-                  APIs.</p>
-              </div>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/firebase.png" alt="">
-              </div>
-            </li>
-            <li>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/sass-orange.png" alt="">
-              </div>
-              <div class="p-wrap fadeIn show-right">
-                <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="p-wrap fadeIn show-left">
-                <p>WordPress is a free, open-source website creation platform. On a more technical level, WordPress is a
-                  content management system (CMS) written in PHP that uses a MySQL database. In non-geek speak, WordPress
-                  is the easiest and most powerful blogging and website builder in existence today.</p>
-              </div>
-              <div class="icon-wrapper fadeIn show">
-                <img class="coding-icon" src="/assets/icons/coding icons/wordpress-orange.png" alt="">
-              </div>
-            </li>
-          </ul>
+            <div class="skill-group">
+              <h2 class="skill-group-title">Databases &amp; Backend</h2>
+              <ul>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/restapi-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>REST (Representational State Transfer) is an architectural style for designing networked APIs.
+                      RESTful APIs use standard HTTP methods to let applications exchange data between client and
+                      server.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>MySQL is a widely used open-source relational database management system. It stores
+                      structured data in tables and uses SQL to query, insert and manage that data efficiently.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/mysql-orange.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/postgresql-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>PostgreSQL is a powerful open-source object-relational database system known for its
+                      reliability, extensibility and standards compliance, supporting advanced data types and
+                      complex queries.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>phpMyAdmin is a free, web-based administration tool for MySQL and MariaDB databases,
+                      letting developers manage databases, tables and queries through a graphical interface instead
+                      of the command line.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/phpmyadmin-orange.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/firebase.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Firebase is a Backend-as-a-Service — BaaS — that started as a YC11 startup and grew up into a
+                      next-generation app-development platform on Google Cloud Platform. ... Firebase frees developers to
+                      focus crafting fantastic user experiences. You don't need to manage servers. You don't need to write
+                      APIs.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h2 class="skill-group-title">DevOps &amp; Build Tools</h2>
+              <ul>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/dockerkubernetes-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Docker packages applications and their dependencies into lightweight, portable containers,
+                      while Kubernetes orchestrates and scales those containers across clusters, automating
+                      deployment, scaling and management.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>Jenkins is an open-source automation server used to build, test and deploy software through
+                      continuous integration and delivery (CI/CD) pipelines, reducing manual work and catching
+                      issues early.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/jenkins-orange.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/webpack-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Webpack is a module bundler for JavaScript applications. It combines scripts, styles and
+                      assets into optimized bundles, handling code splitting, minification and hot module
+                      replacement.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>NPM (Node Package Manager) is the default package manager for Node.js, used to install,
+                      share and manage JavaScript libraries and dependencies across a project.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/npm-orange.svg" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h2 class="skill-group-title">Version Control &amp; Collaboration</h2>
+              <ul>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/git-orange.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Git is the most commonly used version control system. Git tracks the changes you make to files, so you
+                      have a record of what has been done, and you can revert to specific versions should you ever need to.
+                      Git also makes collaboration easier, allowing changes by multiple people to all be merged into one
+                      source.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>GitHub is a code hosting platform for version control and collaboration. It lets you and others work
+                      together on projects from anywhere. ... You'll create your own Hello World repository and learn GitHub's
+                      Pull Request workflow, a popular way to create and review code.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/github-orange.png" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/githubcopilot-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>GitHub Copilot is an AI pair programmer that suggests code completions and entire functions
+                      directly in the editor, trained on code to speed up everyday development tasks.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>GitHub CLI (gh) brings GitHub's pull requests, issues and workflows to the terminal, letting
+                      developers manage repositories without leaving the command line.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/githubcli-orange.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/bitbucket-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Bitbucket is a Git-based source code repository hosting service from Atlassian, offering
+                      version control, pull requests and CI/CD pipelines, often used alongside Jira for team
+                      collaboration.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>Jira is a project and issue tracking tool from Atlassian, widely used to plan, track and
+                      manage agile software development work such as sprints, backlogs and bugs.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/jira-orange.svg" alt="">
+                  </div>
+                </li>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/scrum-orange.svg" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>Scrum is an agile framework for managing software projects in short, iterative cycles called
+                      sprints. It emphasizes collaboration, regular feedback and continuous improvement.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-group">
+              <h2 class="skill-group-title">CMS &amp; Analytics</h2>
+              <ul>
+                <li>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/wordpress-orange.png" alt="">
+                  </div>
+                  <div class="p-wrap fadeIn show-right">
+                    <p>WordPress is a free, open-source website creation platform. On a more technical level, WordPress is a
+                      content management system (CMS) written in PHP that uses a MySQL database. In non-geek speak, WordPress
+                      is the easiest and most powerful blogging and website builder in existence today.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="p-wrap fadeIn show-left">
+                    <p>PostHog is an open-source product analytics platform that lets teams track user behavior,
+                      run feature flags and A/B tests, and analyze funnels — self-hostable for full data
+                      ownership.</p>
+                  </div>
+                  <div class="icon-wrapper fadeIn show">
+                    <img class="coding-icon" src="/assets/icons/coding icons/posthog-orange.svg" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
         <hr class="spacer100">
       </div>
