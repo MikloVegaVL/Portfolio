@@ -25,6 +25,11 @@
   font-weight: 500;
   white-space: nowrap;
   z-index    : 999;
+  transition : color .3s ease-in-out;
+
+  &.dark {
+    color: #FFFFFF;
+  }
 
   @media only screen and (max-width: 770px) {
     top : 34px;

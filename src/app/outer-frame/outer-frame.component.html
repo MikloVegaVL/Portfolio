@@ -1,6 +1,6 @@
 <a href="">
   <img class="h-logo" src="/assets/icons/logo-badge.svg" alt="Logo by Thomas Tritscher">
-  <span class="h-logo-text">thomastritscher.dev</span>
+  <span [class.dark]="darkMode" class="h-logo-text">thomastritscher.dev</span>
 </a>
 <span [ngStyle]="{'color': spanColor, 'zIndex' : z_inactive}" class="h-span"><span class="cap">S</span>oftware <span class="cap">E</span>ngineer</span>
 <nav [class.darkLinks]="darkMode" class="sm">
