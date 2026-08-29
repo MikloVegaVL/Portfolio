@@ -8,6 +8,7 @@
   --primarytext      : #212121;
   --text_icons       : #FFFFFF;
   --secondarytext    : #757575;
+  --descriptiontext  : #474040;
   --dividertext      : #BDBDBD;
   --nativegrey       : #BEBEBE;
   --secondaccentcolor: #AF9A87;
@@ -178,7 +179,7 @@ ul {
 .project-description-wrapper {
   font-size  : 1.8vw;
   font-weight: 300;
-  color      : var(--nativegrey);
+  color      : var(--descriptiontext);
 
   @media only screen and (max-width: 700px) {
     font-size  : 3.5vw;
