@@ -49,6 +49,17 @@ export class MainComponent implements OnInit {
 
   constructor(public transformBg: TransformBGService, public layer: LayerChangeService, public translate: TransitionBgService) { }
 
+  // Hero-image reveal: a grid of small tiles covers the image like a
+  // wall, then each tile falls away with a staggered delay so the wall
+  // reads as crumbling into cubes that rain down and disappear.
+  readonly heroCubeCols = 8;
+  readonly heroCubeRows = 6;
+  readonly heroCubeTiles = Array.from({ length: this.heroCubeCols * this.heroCubeRows }, (_, i) => {
+    const row = Math.floor(i / this.heroCubeCols);
+    const col = i % this.heroCubeCols;
+    return { delay: row * 60 + col * 25 };
+  });
+
   counter = 0;
   touchStart: any;
   swipeDirection: any; //var for touch direction mobile

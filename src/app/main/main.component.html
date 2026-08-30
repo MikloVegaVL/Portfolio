@@ -6,6 +6,11 @@
     <div class="hero-frame">
       <div class="hero-seam"></div>
       <img src="/assets/img/hero-portrait.jpg" alt="Portrait of Thomas Tritscher dissolving into a code overlay">
+      <div class="hero-curtain" [style.grid-template-columns]="'repeat(' + heroCubeCols + ', 1fr)'">
+        @for (tile of heroCubeTiles; track $index) {
+          <span class="hero-cube" [style.animation-delay.ms]="tile.delay"></span>
+        }
+      </div>
     </div>
   </section>
   <div class="bg-wrap">
