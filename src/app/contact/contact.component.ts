@@ -1,5 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
-import { Component, ElementRef, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { LayerChangeService } from '../services/layer-change.service';
 
 
@@ -10,7 +9,7 @@ import { LayerChangeService } from '../services/layer-change.service';
     changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
 
   //var for Layers
   z_active = 9;
@@ -75,53 +74,74 @@ export class ContactComponent implements OnInit {
     }
   }
 
+  // Stored as bound instance methods (not inline in ngOnInit) so the exact
+  // same function reference can be removed in ngOnDestroy - otherwise these
+  // stay attached to `window` forever after routing away from this page,
+  // and this wheel handler in particular unconditionally preventDefaults
+  // every wheel event, silently killing native scroll on every other page
+  // for the rest of the session.
+  private readonly onWheel = (event: WheelEvent) => {
+    // Stop the browser's own scroll/elastic-overscroll bounce - it runs
+    // outside our control and fights the custom transition, which is what
+    // reads as a "shake" layered on top of it.
+    event.preventDefault();
+
+    if (Math.abs(event.deltaY) < 2) {
+      return; //ignore residual trackpad-momentum noise
+    }
+    this.step(event.deltaY < 0 ? -1 : 1); //up : down
+  };
+
+  private readonly onTouchStart = (event: TouchEvent) => {
+    this.touchStart = event.touches[0].clientY;
+  };
+
+  private readonly onTouchMove = (event: TouchEvent) => {
+    const currentTouch = event.touches[0].clientY;
+    if (currentTouch < this.touchStart) {
+      //screen touch up
+      this.swipeDirection = "up";
+    }
+    if (currentTouch > this.touchStart) {
+      //screen touch down
+      this.swipeDirection = "down";
+    }
+  };
+
+  private readonly onTouchEnd = () => {
+    if (this.swipeDirection == "down") {
+      this.step(-1);
+    } else if (this.swipeDirection == "up") {
+      this.step(1);
+    }
+  };
+
+  //keyboard arrow events for Desktop (mirrors wheel behaviour)
+  private readonly onKeydown = (event: KeyboardEvent) => {
+    if (event.key !== "ArrowUp" && event.key !== "ArrowDown") {
+      return;
+    }
+    event.preventDefault();
+    this.step(event.key === "ArrowUp" ? -1 : 1);
+  };
+
   ngOnInit(): void {
-
-    window.addEventListener("wheel", (event: any) => {
-      // Stop the browser's own scroll/elastic-overscroll bounce - it runs
-      // outside our control and fights the custom transition, which is what
-      // reads as a "shake" layered on top of it.
-      event.preventDefault();
-
-      if (Math.abs(event.deltaY) < 2) {
-        return; //ignore residual trackpad-momentum noise
-      }
-      this.step(event.deltaY < 0 ? -1 : 1); //up : down
-    }, { passive: false });
+    window.addEventListener("wheel", this.onWheel, { passive: false });
 
     //touch events for mobile use
-    window.addEventListener("touchstart", (event: any) => {
-      this.touchStart = event.touches[0].clientY;
-    });
-    window.addEventListener("touchmove", (event: any) => {
-      let currentTouch = event.touches[0].clientY;
-      if (currentTouch < this.touchStart) {
-        //screen touch up
-        this.swipeDirection = "up";
-      }
-      if (currentTouch > this.touchStart) {
-        //screen touch down
-        this.swipeDirection = "down";
-      }
-    });
+    window.addEventListener("touchstart", this.onTouchStart);
+    window.addEventListener("touchmove", this.onTouchMove);
+    window.addEventListener("touchend", this.onTouchEnd);
 
+    window.addEventListener("keydown", this.onKeydown);
+  }
 
-    window.addEventListener("touchend", () => {
-      if (this.swipeDirection == "down") {
-        this.step(-1);
-      } else if (this.swipeDirection == "up") {
-        this.step(1);
-      }
-    });
-
-    //keyboard arrow events for Desktop (mirrors wheel behaviour)
-    window.addEventListener("keydown", (event: KeyboardEvent) => {
-      if (event.key !== "ArrowUp" && event.key !== "ArrowDown") {
-        return;
-      }
-      event.preventDefault();
-      this.step(event.key === "ArrowUp" ? -1 : 1);
-    });
+  ngOnDestroy(): void {
+    window.removeEventListener("wheel", this.onWheel);
+    window.removeEventListener("touchstart", this.onTouchStart);
+    window.removeEventListener("touchmove", this.onTouchMove);
+    window.removeEventListener("touchend", this.onTouchEnd);
+    window.removeEventListener("keydown", this.onKeydown);
   }
 
   startScreen() {
