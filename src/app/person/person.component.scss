@@ -62,12 +62,22 @@ figure {
   margin: 0;
   width : 100%;
 
-  img {
-    width        : 100%;
-    margin       : .5vw 0;
-    position     : relative;
-    z-index      : 1;
+  // clip on the (unfiltered) wrapper, not the img itself - a CSS
+  // filter on the img promotes it to its own compositing layer, and
+  // that layer only clips border-radius on one corner in some
+  // browsers. object-fit isn't the fix: it changes how the image is
+  // framed (crops it), it doesn't touch the compositing/clip issue.
+  picture {
+    display      : block;
+    overflow     : hidden;
     border-radius: 16px;
+  }
+
+  img {
+    width   : 100%;
+    margin  : .5vw 0;
+    position: relative;
+    z-index : 1;
   }
 }
 
