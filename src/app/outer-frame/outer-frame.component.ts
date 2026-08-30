@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'app-outer-frame',
@@ -8,6 +8,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
     standalone: false
 })
 export class OuterFrameComponent implements OnInit {
+
+  // forces the light (white) logo-text styling for pages with a dark
+  // background, independent of the menu-open darkMode state
+  @Input() lightLogoText = false;
 
   darkMode = false;
   defaultColor = '#585858';

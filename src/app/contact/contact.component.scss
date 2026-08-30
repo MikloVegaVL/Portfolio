@@ -19,6 +19,25 @@
   color          : #d0d0d0;
 }
 
+.h-h1-link {
+  color  : inherit;
+  display: inline-block;
+
+  &:hover {
+    animation: h-h1-pulse 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes h-h1-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+}
+
 .h-h1 {
   font-size        : 6vw;
   font-weight      : 500;

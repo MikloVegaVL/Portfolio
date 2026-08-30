@@ -1,6 +1,6 @@
 <div class="main-wrapper">
   <div>
-    <app-outer-frame>
+    <app-outer-frame [lightLogoText]="true">
     </app-outer-frame>
   </div>
 </div>
@@ -33,19 +33,21 @@
     </div>
   </div>
   <section class="h h-theme-dark" [ngStyle]="{'zIndex' : z_active}">
-    <h1 class="h-h1">
-      <span class="h-h1_transition-wrapper pre-h-h1_transition">
-        <span class="h-h1_transition-e pre-h-h1_transition-e" [ngStyle]="{'transform' : firstText}">
-          lets
+    <a class="h-h1-link" href="mailto:sayhello@thomastritscher.com">
+      <h1 class="h-h1">
+        <span class="h-h1_transition-wrapper pre-h-h1_transition">
+          <span class="h-h1_transition-e pre-h-h1_transition-e" [ngStyle]="{'transform' : firstText}">
+            lets
+          </span>
         </span>
-      </span>
-      <span class="h-h1_transition-wrapper ">
-        <span class="h-h1_transition-e" [ngStyle]="{'transform' : firstText}">create</span>
-      </span>
-      <span class="h-h1_transition-wrapper ">
-        <span class="h-h1_transition-e" [ngStyle]="{'transform' : firstText}">something!</span>
-      </span>
-    </h1>
+        <span class="h-h1_transition-wrapper ">
+          <span class="h-h1_transition-e" [ngStyle]="{'transform' : firstText}">create</span>
+        </span>
+        <span class="h-h1_transition-wrapper ">
+          <span class="h-h1_transition-e" [ngStyle]="{'transform' : firstText}">something!</span>
+        </span>
+      </h1>
+    </a>
   </section>
   <section class="h h-social-media  h-theme-dark " [ngStyle]="{'zIndex' : z_inactive}">
     <div class="content-wrapper">
