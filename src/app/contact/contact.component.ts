@@ -113,6 +113,15 @@ export class ContactComponent implements OnInit {
         this.step(1);
       }
     });
+
+    //keyboard arrow events for Desktop (mirrors wheel behaviour)
+    window.addEventListener("keydown", (event: KeyboardEvent) => {
+      if (event.key !== "ArrowUp" && event.key !== "ArrowDown") {
+        return;
+      }
+      event.preventDefault();
+      this.step(event.key === "ArrowUp" ? -1 : 1);
+    });
   }
 
   startScreen() {

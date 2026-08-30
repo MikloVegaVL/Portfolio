@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import {
   trigger,
   style,
@@ -32,40 +32,26 @@ import {
 
 
 export class ProjectsComponent implements OnInit{
-  // translate = 'translate3d(0px, 0px, 0px)';
-  // offSet = 0;
-  // value = 50;
 
-  // @ViewChild('scrollContent') scrollContainer!: ElementRef;
+  @ViewChild('scrollContainer')
+  scrollContainer!: ElementRef<HTMLElement>;
 
   constructor() { }
-  // ngAfterViewInit(): void {
-  //   window.addEventListener("wheel", (event: any) => {
-  //     console.log("SCROLLING");
-  //     let rect = this.scrollContainer.nativeElement.getBoundingClientRect();
-  //     console.log(rect);
-
-  //     if (event.deltaY < 0) {
-  //       console.log('scrolling up');
-        
-  //       this.offSet += this.value;
-  //     } else if (event.deltaY > 0) {
-  //       console.log('scrolling down');
-  //       this.offSet -= this.value; 
-  //     }
-  //     this.scroll();
-      
-  //   });
-  
 
   ngOnInit(): void {
- 
+    // let ArrowUp/ArrowDown scroll the page like a normal wheel scroll
+    window.addEventListener('keydown', (event: KeyboardEvent) => {
+      if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') {
+        return;
+      }
+      event.preventDefault();
+
+      const step = 160; // px per key press
+      this.scrollContainer.nativeElement.scrollBy({
+        top: event.key === 'ArrowDown' ? step : -step,
+        behavior: 'smooth'
+      });
+    });
   }
 
-  // scroll() {
-  //   this.translate = `translate3d(0px, ${this.offSet}px, 0px)`;
-    
-  // }
-  
 }
-
