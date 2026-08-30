@@ -1,8 +1,18 @@
-.scoll-container {
+.scroll-container {
   @media only screen and (max-width: 500px) {
     height: 100vh;
   }
 
+}
+
+// sections here only contain floated .column-left/.column-right children;
+// without clearing, the section collapses to ~0 height even though its
+// floated content still paints, which starves the page of real scroll
+// height (and makes the scrollbar thumb look oversized).
+section::after {
+  content: "";
+  display: table;
+  clear  : both;
 }
 
 .content-text {
@@ -53,10 +63,11 @@ figure {
   width : 100%;
 
   img {
-    width   : 100%;
-    margin  : .5vw 0;
-    position: relative;
-    z-index : 1;
+    width        : 100%;
+    margin       : .5vw 0;
+    position     : relative;
+    z-index      : 1;
+    border-radius: 16px;
   }
 }
 
