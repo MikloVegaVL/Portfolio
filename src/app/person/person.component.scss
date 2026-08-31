@@ -16,11 +16,11 @@ section::after {
 }
 
 .content-text {
+  font-size: 1.4vw;
 
   @media only screen and (max-width: 770px) {
-    font-size: 2.4vw !important;
+    font-size: 3.8vw;
   }
-
 }
 
 .person-headline-wrapper {
@@ -43,6 +43,10 @@ section::after {
 
 .column-left {
   float: left;
+
+  @media only screen and (max-width: 770px) {
+    float: none;
+  }
 }
 
 .column50 {
@@ -50,12 +54,17 @@ section::after {
   padding: 0 20px;
 
   @media only screen and (max-width: 770px) {
+    width  : 100%;
     padding: 0 10px;
   }
 }
 
 .column-right {
   float: right;
+
+  @media only screen and (max-width: 770px) {
+    float: none;
+  }
 }
 
 figure {
@@ -79,10 +88,6 @@ figure {
     position: relative;
     z-index : 1;
   }
-}
-
-.content-text {
-  font-size: 1.4vw;
 }
 
 .h2-default {
