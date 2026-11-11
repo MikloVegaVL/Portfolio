@@ -1,48 +1,9 @@
 <nav class="h-nav">
-<ul>
-  <li>
-    <span>_</span>
-    <div id="projects" class="navpoint-switch">
-      <div [ngStyle]="{'transform' : layer.navPoint_text}"  class="navpoint-switch-wrapper">
-        <a routerLink="projects">
-          <span>projects</span>
-        </a>
-        <a routerLink="/projects">
-          <span>
-           <b>view</b>
-          projects</span>
-        </a>
-        <a routerLink="/skills">
-          <span> <b>view</b>
-            skills</span>
-        </a>
-        <a routerLink="/contact">
-          <span> <b>Drop</b>
-            a Line!</span>
-        </a>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div id="journey" [ngStyle]="{'transform' : layer.navPoint_text1}" class="h-nav-wrapper">
-      <span>_</span>
-      <div class="navpoint-switch">
-        <a routerLink="/skills">
-          <span>skills</span>
-        </a>
-      </div>
-    </div>
-  </li>
-  <li>
-    <div id="contact" [ngStyle]="{'transform' : layer.navPoint_text1}" class="h-nav-wrapper">
-      <span>_</span>
-      <div class="navpoint-switch">
-        <a routerLink="contact">
-          <span>contact</span>
-        </a>
-      </div>
-    </div>
-  </li>
-</ul>
-
+  <ul>
+    <li><a routerLink="/leistungen">{{ 'nav.services' | t }}</a></li>
+    <li><a routerLink="/vorgehen">{{ 'nav.method' | t }}</a></li>
+    <li><a routerLink="/ueber-mich">{{ 'nav.about' | t }}</a></li>
+    <li><a routerLink="/entwicklung">{{ 'nav.development' | t }}</a></li>
+    <li><a routerLink="/kontakt">{{ 'nav.contact' | t }}</a></li>
+  </ul>
 </nav>

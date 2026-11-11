@@ -18,12 +18,12 @@ import { CursorComponent } from './cursor/cursor.component';
 import { ScrollBarComponent } from './scroll-bar/scroll-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './skills/skills.component';
-
-
-
-
-
-
+import { LeistungenComponent } from './leistungen/leistungen.component';
+import { MethodologyComponent } from './methodology/methodology.component';
+import { DevelopmentComponent } from './development/development.component';
+import { LanguageSwitcherComponent } from './i18n/language-switcher/language-switcher.component';
+import { TranslatePipe } from './i18n/translate.pipe';
+import { EntryOfferComponent } from './shared/entry-offer/entry-offer.component';
 
 @NgModule({
   declarations: [
@@ -41,17 +41,17 @@ import { SkillsComponent } from './skills/skills.component';
     CursorComponent,
     ScrollBarComponent,
     SkillsComponent,
-
-
-
-
+    LeistungenComponent,
+    MethodologyComponent,
+    DevelopmentComponent,
+    LanguageSwitcherComponent,
+    TranslatePipe,
+    EntryOfferComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,42 @@
+<div class="main-wrapper">
+  <app-outer-frame></app-outer-frame>
+</div>
+<div class="wrapper">
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <div class="wrapper_inner">
+        <hr class="spacer100" />
+        <section class="project-header">
+          <article>
+            <h1 class="project-headline-wrapper">
+              <span class="project-headline-content">
+                <span>{{ 'method.title' | t }}</span>
+              </span>
+            </h1>
+            <p class="project-description-wrapper">
+              <span class="project-description-content">
+                <span>{{ 'method.intro' | t }}</span>
+              </span>
+            </p>
+          </article>
+        </section>
+
+        <section class="method-phases">
+          @for (phase of phases; track phase.title) {
+            <article class="method-phase">
+              <h2>{{ phase.title | t }}</h2>
+              <p>{{ phase.body | t }}</p>
+            </article>
+          }
+        </section>
+
+        <section class="method-example">
+          <h2>{{ 'method.example.title' | t }}</h2>
+          <p>{{ 'method.example.body' | t }}</p>
+        </section>
+
+        <hr class="spacer100" />
+      </div>
+    </div>
+  </div>
+</div>

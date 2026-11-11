@@ -1,0 +1,29 @@
+.lang-switch {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  pointer-events: auto;
+
+  button {
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 4px 8px;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.55;
+
+    &.active {
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #FF5722;
+      outline-offset: 2px;
+    }
+  }
+}

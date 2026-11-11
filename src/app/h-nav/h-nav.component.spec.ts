@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HNavComponent } from './h-nav.component';
+import { AppModule } from '../app.module';
 
 describe('HNavComponent', () => {
   let component: HNavComponent;
@@ -8,7 +9,7 @@ describe('HNavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HNavComponent ]
+      imports: [ AppModule ]
     })
     .compileComponents();
   });

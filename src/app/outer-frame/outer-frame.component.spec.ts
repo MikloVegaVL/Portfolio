@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OuterFrameComponent } from './outer-frame.component';
+import { AppModule } from '../app.module';
 
 describe('OuterFrameComponent', () => {
   let component: OuterFrameComponent;
@@ -8,7 +9,7 @@ describe('OuterFrameComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OuterFrameComponent ]
+      imports: [ AppModule ]
     })
     .compileComponents();
   });

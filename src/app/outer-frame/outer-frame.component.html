@@ -2,7 +2,8 @@
   <img class="h-logo" src="/assets/icons/logo-badge.svg" alt="Logo by Thomas Tritscher">
   <span [class.dark]="darkMode || lightLogoText" class="h-logo-text">thomastritscher.dev</span>
 </a>
-<span [ngStyle]="{'color': spanColor, 'zIndex' : z_inactive}" class="h-span"><span class="cap">S</span>oftware <span class="cap">E</span>ngineer</span>
+<span [ngStyle]="{'color': spanColor, 'zIndex' : z_inactive}" class="h-span">{{ 'home.hero.kicker' | t }}</span>
+<app-language-switcher class="frame-lang-switch"></app-language-switcher>
 <nav [class.darkLinks]="darkMode" class="sm">
   <ul>
     <li>
@@ -47,25 +48,31 @@
     @if (darkMode) {
       <li [ngStyle]= "{'animation' : 'fade-from-left 1s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
         <span>01</span>
-        <a routerLink="/projects">projects</a>
+        <a routerLink="/leistungen">{{ 'nav.services' | t }}</a>
       </li>
     }
     @if (darkMode) {
       <li [ngStyle]= "{'animation' : 'fade-from-left 1.2s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
         <span>02</span>
-        <a routerLink="/skills">skills</a>
+        <a routerLink="/vorgehen">{{ 'nav.method' | t }}</a>
       </li>
     }
     @if (darkMode) {
       <li [ngStyle]= "{'animation' : 'fade-from-left 1.3s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
         <span>03</span>
-        <a routerLink="/person">person</a>
+        <a routerLink="/ueber-mich">{{ 'nav.about' | t }}</a>
       </li>
     }
     @if (darkMode) {
       <li [ngStyle]= "{'animation' : 'fade-from-left 1.4s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
         <span>04</span>
-        <a routerLink="/contact">say hello!</a>
+        <a routerLink="/entwicklung">{{ 'nav.development' | t }}</a>
+      </li>
+    }
+    @if (darkMode) {
+      <li [ngStyle]= "{'animation' : 'fade-from-left 1.5s cubic-bezier(0.72, -0.01, 0.45, 0.94) 0s 1 normal none'}">
+        <span>05</span>
+        <a routerLink="/kontakt">{{ 'nav.contact' | t }}</a>
       </li>
     }
   </ul>
@@ -74,10 +81,10 @@
 <div [ngStyle]="{'opacity' : o_inactiv}" class="legals">
   <ul>
     <li>
-      <a routerLink="/imprint">imprint</a>
+      <a routerLink="/imprint">{{ 'common.imprint' | t }}</a>
     </li>
-    <li >
-      <a routerLink="/data-protection">data protection</a>
+    <li>
+      <a routerLink="/data-protection">{{ 'common.dataprotection' | t }}</a>
     </li>
   </ul>
 </div>

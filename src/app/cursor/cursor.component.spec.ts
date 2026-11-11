@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CursorComponent } from './cursor.component';
+import { AppModule } from '../app.module';
 
 describe('CursorComponent', () => {
   let component: CursorComponent;
@@ -8,7 +9,7 @@ describe('CursorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CursorComponent ]
+      imports: [ AppModule ]
     })
     .compileComponents();
   });

@@ -1,0 +1,43 @@
+.service-list {
+  display: grid;
+  gap: 28px;
+  margin: 40px 0;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px 32px;
+  color: #212121;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  p {
+    line-height: 1.65;
+    color: #474040;
+  }
+
+  ul {
+    margin: 12px 0 0;
+    padding-left: 18px;
+    color: #474040;
+    line-height: 1.7;
+  }
+
+  &--primary {
+    border-left: 6px solid #FF5722;
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+    }
+  }
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}

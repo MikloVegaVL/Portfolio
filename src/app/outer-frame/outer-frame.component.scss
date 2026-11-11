@@ -277,3 +277,16 @@ menu {
     transform: translateX(0);
   }
 }
+
+.frame-lang-switch {
+  position: fixed;
+  top: 22px;
+  right: 96px;
+  z-index: 12;
+  color: #585858;
+
+  @media only screen and (max-width: 770px) {
+    right: 64px;
+    top: 18px;
+  }
+}

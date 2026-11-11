@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DataProtectionComponent } from './data-protection.component';
+import { AppModule } from '../app.module';
 
 describe('DataProtectionComponent', () => {
   let component: DataProtectionComponent;
@@ -8,7 +9,7 @@ describe('DataProtectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DataProtectionComponent ]
+      imports: [ AppModule ]
     })
     .compileComponents();
   });

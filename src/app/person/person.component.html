@@ -9,54 +9,23 @@
           <hr class="spacer100">
           <section>
             <h1 class="person-headline-wrapper">
-              person
+              {{ 'about.title' | t }}
             </h1>
             <div class="column-left column50">
               <figure @fadeIn class="img_person ">
                 <picture>
-                  <img src="/assets/img/workspace.jpg" alt="Workspace with Laptop and Screen">
+                  <img src="/assets/img/workspace.jpg" alt="Workspace with laptop and screen">
                 </picture>
               </figure>
             </div>
             <article @fadeIn class="column-right column50">
-              <p class="content-text">
-                I am a <strong>Software Engineer</strong> and grew up in Hanover, Germany. I have been programming
-                professionally since 2020 and have implemented various projects with many hours of work. I love to work on all type of projects from various industries and make them accessible to the world.
-              </p>
-            </article>
-            <figure @fadeIn class="img_person column50 column-left">
-              <picture [ngStyle]="{'filter' : 'brightness(1.1)'}">
-                <img src="/assets/img/work1.png"
-                  alt="Personal Picture at the Workspace">
-              </picture>
-            </figure>
-            <article class="column-right column50 fadeIn show">
-              <p class="content-text">
-                Why the Developer Academy?<br>
-                The academy introduced me to, challenged and tested all current methods. Due to the Academy I was trained by professionals and became part of a strong community who is always interested in further development.
-              </p>
-            </article>
-            <hr class="spacer100_2">
-          </section>
-          <section @fadeIn>
-            <div class="column-left">
-              <h2 class="h2-default">Let's call it an offer</h2>
-            </div>
-            <article class="column-left column50">
-              <h3>Digital</h3>
-              <ul class="list-default">
-                <li class="list_item-default">
-                  <p>Software Development</p>
-                </li>
-                <li class="list_item-default">
-                  <p></p>
-                </li>
-                <li class="list_item-default">
-                  <p></p>
-                </li>
-              </ul>
+              <p class="content-text"><strong>{{ 'about.lead' | t }}</strong></p>
+              <p class="content-text">{{ 'about.p1' | t }}</p>
+              <p class="content-text">{{ 'about.p2' | t }}</p>
+              <p class="content-text">{{ 'about.training' | t }}</p>
             </article>
           </section>
+          <hr class="spacer100_2">
         </div>
       </div>
     </div>

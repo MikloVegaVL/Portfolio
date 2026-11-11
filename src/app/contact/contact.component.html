@@ -1,134 +1,42 @@
 <div class="main-wrapper">
   <div>
-    <app-outer-frame [lightLogoText]="true">
-    </app-outer-frame>
+    <app-outer-frame [lightLogoText]="true"></app-outer-frame>
   </div>
 </div>
-<div>
-  <div class="theme-background">
-    <div class="scroll-nav">
-      <div class="scroll-nav-box">
-        <div class="scroll-nav-bar">
-          <div [ngStyle]="{'transform' : layer.default_length}" class="bar-bg"></div>
-        </div>
-        <div class="scroll-nav-bar">
-          <div [ngStyle]="{'transform' : layer.default_length1}" class="bar-bg"></div>
-        </div>
-        <div class="scroll-nav-bar">
-          <div [ngStyle]="{'transform' : layer.default_length2}" class="bar-bg"></div>
-        </div>
-        <div class="scroll-nav-bar">
-          <div [ngStyle]="{'transform' : layer.default_length3}" class="bar-bg"></div>
-        </div>
+<div class="wrapper">
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <div class="wrapper_inner">
+        <hr class="spacer100">
+        <section class="project-header">
+          <article>
+            <h1 class="project-headline-wrapper">
+              <span class="project-headline-content">
+                <span>{{ 'contact.title' | t }}</span>
+              </span>
+            </h1>
+            <p class="project-description-wrapper">
+              <span class="project-description-content">
+                <span>{{ 'contact.intro' | t }}</span>
+              </span>
+            </p>
+          </article>
+        </section>
+
+        <section class="contact-details">
+          <p>{{ 'contact.mail' | t }}
+            <a href="mailto:sayhello@thomastritscher.com">sayhello@thomastritscher.com</a>
+          </p>
+          <p>{{ 'contact.social' | t }}
+            <a href="https://github.com/MikloVegaVL" target="_blank" rel="noopener">GitHub</a>
+            &middot;
+            <a href="https://www.linkedin.com/in/thomas-tritscher-40ab14213/" target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </section>
+
+        <app-entry-offer></app-entry-offer>
+        <hr class="spacer100">
       </div>
-      <div [ngStyle]="{'transform' : layer.runout}" class="scroll-nav-scripture">
-        <span>ScrollDown</span>
-        <div class="scroll-vertical-line"></div>
-      </div>
-    </div>
-    <div class="mobile-hint">
-      <span></span>
-      <span></span>
-      <span></span>
     </div>
   </div>
-  <section class="h h-theme-dark" [ngStyle]="{'zIndex' : z_active}">
-    <a class="h-h1-link" href="mailto:sayhello@thomastritscher.com">
-      <h1 class="h-h1">
-        <span class="h-h1_transition-wrapper pre-h-h1_transition">
-          <span class="h-h1_transition-e pre-h-h1_transition-e" [ngStyle]="{'transform' : firstText}">
-            lets
-          </span>
-        </span>
-        <span class="h-h1_transition-wrapper ">
-          <span class="h-h1_transition-e" [ngStyle]="{'transform' : firstText}">create</span>
-        </span>
-        <span class="h-h1_transition-wrapper ">
-          <span class="h-h1_transition-e" [ngStyle]="{'transform' : firstText}">something!</span>
-        </span>
-      </h1>
-    </a>
-  </section>
-  <section class="h h-social-media  h-theme-dark " [ngStyle]="{'zIndex' : z_inactive}">
-    <div class="content-wrapper">
-      <div class="p-wrap">
-        <div class="content-a" [ngStyle]="{'transform' : secondText}">
-          <p>You can find me on</p>
-        </div>
-      </div>
-      <div class="p-wrap">
-        <div class="content-a" [ngStyle]="{'transform' : secondText}">
-          <p>
-            <a target="_blank" href="https://github.com/MikloVegaVL" >Github</a>
-          </p>
-        </div>
-      </div>
-      <div class="p-wrap">
-        <div class="content-a" [ngStyle]="{'transform' : secondText}">
-          <p>
-            <a target="_blank" href="https://www.linkedin.com/in/thomas-tritscher-40ab14213/">Linkedin</a>
-          </p>
-        </div>
-      </div>
-      <div class="p-wrap">
-        <div class="content-a" [ngStyle]="{'transform' : secondText}">
-          <p>
-            <a target="_blank" href="mailto:sayhello@thomastritscher.com">Mail</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="h h-theme-dark" [ngStyle]="{'zIndex' : z_inactive2}">
-    <div class="content-wrapper">
-      <div class="p-wrap">
-        <div class="content-p" [ngStyle]="{'transform' : thirdText}">
-          <p>Or we just have a </p>
-        </div>
-      </div>
-      <div class="p-wrap">
-        <div class="content-p" [ngStyle]="{'transform' : thirdText}">
-          <p>cup of coffee together</p>
-        </div>
-      </div>
-      <div class="p-wrap">
-        <div class="content-p" [ngStyle]="{'transform' : thirdText}">
-          <p>and talk about</p>
-        </div>
-      </div>
-      <div class="p-wrap">
-        <div class="content-p" [ngStyle]="{'transform' : thirdText}">
-          <p>
-            <span>
-              <a href="mailto:sayhello@thomastritscher.com">
-                <b>your project</b>
-              </a>
-            </span>
-          </p>
-        </div>
-      </div>
-      <picture class="content-img-wrapper">
-        <img src="/assets/img/desktop_coffee.jpg" alt="Workspace with coffee cup" [ngStyle]="{'transform' : defaultImgPosition}">
-      </picture>
-    </div>
-  </section>
-  <section class="h h-theme-dark" [ngStyle]="{'zIndex' : z_inactive3}">
-    <div class="content-wrapper content-wrapper_textme">
-      <div class="form-wrap">
-        <div class="content-form">
-          <span class="p-wrap">
-            <label class="content-t" for="textme" [ngStyle]="{'transform' : fourthText}">
-              Feel free to drop
-              <span>
-                <a href="mailto:sayhello@thomastritscher.com">
-                  <b>a line!</b>
-                </a>
-              </span>
-            </label>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <app-cursor></app-cursor>
 </div>

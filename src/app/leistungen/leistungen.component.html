@@ -1,0 +1,52 @@
+<div class="main-wrapper">
+  <app-outer-frame></app-outer-frame>
+</div>
+<div class="wrapper">
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <div class="wrapper_inner">
+        <hr class="spacer100" />
+        <section class="project-header">
+          <article>
+            <h1 class="project-headline-wrapper">
+              <span class="project-headline-content">
+                <span>{{ 'services.title' | t }}</span>
+              </span>
+            </h1>
+            <p class="project-description-wrapper">
+              <span class="project-description-content">
+                <span>{{ 'services.intro' | t }}</span>
+              </span>
+            </p>
+          </article>
+        </section>
+
+        <section class="service-list">
+          <article class="service-card service-card--primary">
+            <h2>{{ 'services.audits.title' | t }}</h2>
+            <p>{{ 'services.audits.body' | t }}</p>
+            <ul>
+              <li>{{ 'services.audits.point1' | t }}</li>
+              <li>{{ 'services.audits.point2' | t }}</li>
+              <li>{{ 'services.audits.point3' | t }}</li>
+            </ul>
+          </article>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <h2>{{ 'services.compliance.title' | t }}</h2>
+              <p>{{ 'services.compliance.body' | t }}</p>
+            </article>
+            <article class="service-card">
+              <h2>{{ 'services.incident.title' | t }}</h2>
+              <p>{{ 'services.incident.body' | t }}</p>
+            </article>
+          </div>
+        </section>
+
+        <app-entry-offer></app-entry-offer>
+        <hr class="spacer100" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="main-wrapper">
+  <app-outer-frame></app-outer-frame>
+</div>
+<div class="wrapper">
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <div class="wrapper_inner">
+        <hr class="spacer100" />
+        <section class="project-header">
+          <article>
+            <h1 class="project-headline-wrapper">
+              <span class="project-headline-content">
+                <span>{{ 'dev.title' | t }}</span>
+              </span>
+            </h1>
+            <p class="project-description-wrapper">
+              <span class="project-description-content">
+                <span>{{ 'dev.intro' | t }}</span>
+              </span>
+            </p>
+          </article>
+        </section>
+
+        <section class="development-section">
+          <h2>{{ 'dev.projects.title' | t }}</h2>
+          <div class="project-grid">
+            @for (project of projects; track project.number) {
+              <a class="project-card" [href]="project.href" target="_blank" rel="noopener">
+                <span class="project-number">{{ project.number }}</span>
+                <h3>{{ project.title }}</h3>
+                <img [src]="project.image" [alt]="project.title" loading="lazy" />
+              </a>
+            }
+          </div>
+        </section>
+
+        <section class="development-section">
+          <h2>{{ 'dev.skills.title' | t }}</h2>
+          <div class="skill-groups">
+            @for (group of skillGroups; track group.name) {
+              <article class="skill-group">
+                <h3>{{ group.name }}</h3>
+                <ul>
+                  @for (item of group.items; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </article>
+            }
+          </div>
+        </section>
+
+        <hr class="spacer100" />
+      </div>
+    </div>
+  </div>
+</div>

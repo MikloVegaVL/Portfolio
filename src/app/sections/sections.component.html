@@ -1,15 +1,14 @@
-
 <!-- Section1 -->
 <section [ngStyle]="{'z-index' : layer.z_active}" class="h  active">
   <div [ngStyle]="{'opacity' : layer.o_img_w}" class="img-wrapper">
     <div [ngStyle]="{'opacity' :layer. o_inactive}" class="img-wrapper-bg">
       <picture class="section-image-one">
-      <img src="/assets/img/projects2.jpg" alt="Project Desk picture">
+      <img src="/assets/img/projects2.jpg" alt="Workspace overview">
       </picture>
     </div>
     <div [ngStyle]="{'opacity' : layer.o_inactive2}" class="img-wrapper-bg">
       <picture class="section-image-two">
-        <img src="./assets/img/journey2.jpg" alt="Dark hill wit lighted road picture">
+        <img src="./assets/img/journey2.jpg" alt="Dark hill with a lit road">
       </picture>
     </div>
   </div>
@@ -22,126 +21,71 @@
 </section>
 
 <!-- Section2 -->
-
 <section class="h" [ngStyle]="{'z-index' : layer.z_inactive}">
   <h1 class="s1-h1">
     <span [ngStyle]="{'margin-top.px': '0', 'margin-right.px' : '0', 'margin-bottom': '-0.5%','margin-left.px': '-5px'}"
       class="s1-h1-wrapper">
-            <span [ngStyle]="{'transform' : layer.firstText}" class="s1-h1-wrapper-e">I’m Thomas Tritscher,</span>
+      <span [ngStyle]="{'transform' : layer.firstText}" class="s1-h1-wrapper-e">{{ 'home.hero.kicker' | t }}</span>
     </span>
     <span class="s1-h1-wrapper">
-      <span [ngStyle]="{'transform' : layer.firstText}" class="s1-h1-wrapper-e">a Software Engineer</span>
-      <span [ngStyle]="{'transform' : layer.firstText}" class="s1-h1-wrapper-e">based in Germany.</span>
+      <span [ngStyle]="{'transform' : layer.firstText}" class="s1-h1-wrapper-e">{{ 'home.hero.title' | t }}</span>
+      <span [ngStyle]="{'transform' : layer.firstText}" class="s1-h1-wrapper-e">{{ 'home.hero.subtitle' | t }}</span>
     </span>
   </h1>
 </section>
-
 
 <!-- Section3 -->
 <section [ngStyle]="{'z-index' : layer.z_inactive2 }" class="h">
   <div class="content-wrapper">
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <h2>I'm working as Software Engineer.</h2>
-        <p>I started my advanced training to become a</p>
+        <h2>{{ 'home.services.title' | t }}</h2>
+        <p>{{ 'home.services.lead' | t }}</p>
       </div>
     </div>
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p>Software Engineer at the end of 2020 at the</p>
+        <p><b>{{ 'common.audits' | t }}</b></p>
       </div>
     </div>
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p>Developer Academy. Since then I have been </p>
+        <p><b>{{ 'common.compliance' | t }}</b></p>
       </div>
     </div>
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p>trying to constantly challenge myself and improve</p>
+        <p><b>{{ 'common.incident' | t }}</b></p>
       </div>
     </div>
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p>in order to get to the next skill level.</p>
-      </div>
-    </div>
-    <br>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p>The following projects describe my beginnings as</p>
-      </div>
-    </div>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p>well as progress and learning experiences.</p>
-      </div>
-    </div>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.secondText}" class="content-a">
-        <p></p>
+        <p><a routerLink="/leistungen"><b>{{ 'services.title' | t }} →</b></a></p>
       </div>
     </div>
   </div>
-
 </section>
 
 <!-- Section4 -->
-<section  [ngStyle]="{'z-index' : layer.z_inactive2 }" class="h">
+<section [ngStyle]="{'z-index' : layer.z_inactive2 }" class="h">
   <div class="content-wrapper">
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <h2>I code a lot!</h2>
-        <p>Programming has become my new passion,</p>
+        <h2>{{ 'home.method.title' | t }}</h2>
+        <p>{{ 'home.method.body' | t }}</p>
       </div>
     </div>
     <div class="p-wrap">
       <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <p>I am fascinated by the development opportunities </p>
-      </div>
-    </div>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <p>and learning potential. In various projects </p>
-      </div>
-    </div>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <p>I try to master my existing skills and gain new ones.</p>
-      </div>
-    </div>
-    <br>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <p>Here is a list of the languages and tools I am already</p>
-      </div>
-    </div>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <p>working with.</p>
-      </div>
-    </div>
-    <div class="p-wrap">
-      <div [ngStyle]="{'transform' : layer.thirdText}" class="content-a">
-        <p></p>
+        <p><a routerLink="/vorgehen"><b>{{ 'home.method.cta' | t }} →</b></a></p>
       </div>
     </div>
   </div>
-
-
 </section>
 
 <!-- Section5 -->
-<section  [ngStyle]="{'z-index' : layer.z_inactive3}" class="h textme">
+<section [ngStyle]="{'z-index' : layer.z_inactive3}" class="h textme">
   <div class="content-wrapper content-wrapper-contact">
-    <div class="form-wrap">
-      <div class="content-form">
-        <span class="p-wrap">
-          <label class="content-a" [ngStyle]="{'transform' : layer.fourthText}" for="textme">Want to work with
-            <span routerLink="/person" class="cap"><b>me?</b></span>
-          </label>
-        </span>
-      </div>
-    </div>
+    <app-entry-offer></app-entry-offer>
   </div>
 </section>

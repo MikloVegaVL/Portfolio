@@ -1,0 +1,87 @@
+.entry-offer {
+  background: #ffffff;
+  color: #212121;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 640px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 8px 0 12px;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+  }
+
+  &-kicker {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FF5722;
+  }
+
+  &-body {
+    margin: 0 0 20px;
+    line-height: 1.6;
+  }
+
+  &-boundary {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: grid;
+    gap: 6px;
+
+    .free { color: #00796B; }
+    .paid { color: #757575; }
+  }
+
+  &-form {
+    display: grid;
+    gap: 14px;
+
+    label {
+      display: grid;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    input[type='url'],
+    input[type='email'] {
+      padding: 10px 12px;
+      border: 1px solid #BDBDBD;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .consent {
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 10px;
+    }
+
+    button {
+      justify-self: start;
+      padding: 12px 22px;
+      border: 0;
+      border-radius: 30px;
+      background: #FF5722;
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px solid #212121;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .form-message {
+    margin: 16px 0 0;
+    font-size: 14px;
+
+    &.success { color: #00796B; }
+    &.error { color: #c62828; }
+  }
+}

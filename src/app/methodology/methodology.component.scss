@@ -1,0 +1,29 @@
+.method-phases {
+  display: grid;
+  gap: 18px;
+  margin: 40px 0;
+}
+
+.method-phase,
+.method-example {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 30px;
+  color: #212121;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    line-height: 1.65;
+    color: #474040;
+  }
+}
+
+.method-example {
+  border-left: 6px solid #00796B;
+  margin-bottom: 40px;
+}

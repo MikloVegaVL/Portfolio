@@ -1,0 +1,35 @@
+<section class="entry-offer">
+  <span class="entry-offer-kicker">{{ 'common.audits' | t }}</span>
+  <h2>{{ 'offer.title' | t }}</h2>
+  <p class="entry-offer-body">{{ 'offer.body' | t }}</p>
+  <ul class="entry-offer-boundary">
+    <li class="free">{{ 'offer.free' | t }}</li>
+    <li class="paid">{{ 'offer.paid' | t }}</li>
+  </ul>
+
+  <form class="entry-offer-form" (submit)="$event.preventDefault(); submit()">
+    <label>
+      <span>{{ 'offer.form.url' | t }}</span>
+      <input type="url" name="url" [value]="url" (input)="onUrl($event)" placeholder="https://example.com" />
+    </label>
+    <label>
+      <span>{{ 'offer.form.email' | t }}</span>
+      <input type="email" name="email" [value]="email" (input)="onEmail($event)" placeholder="you@example.com" />
+    </label>
+    <label class="consent">
+      <input type="checkbox" name="consent" [checked]="consent" (change)="onConsent($event)" />
+      <span>{{ 'offer.form.consent' | t }}</span>
+    </label>
+    <button type="submit">{{ 'offer.form.submit' | t }}</button>
+  </form>
+
+  @if (state === 'success') {
+    <p class="form-message success">{{ 'offer.form.success' | t }}</p>
+  }
+  @if (state === 'error') {
+    <p class="form-message error">{{ 'offer.form.error' | t }}</p>
+  }
+  @if (state === 'retry') {
+    <p class="form-message error">{{ 'offer.form.retry' | t }}</p>
+  }
+</section>

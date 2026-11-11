@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ScrollhintComponent } from './scrollhint.component';
+import { AppModule } from '../app.module';
 
 describe('ScrollhintComponent', () => {
   let component: ScrollhintComponent;
@@ -8,7 +9,7 @@ describe('ScrollhintComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScrollhintComponent ]
+      imports: [ AppModule ]
     })
     .compileComponents();
   });

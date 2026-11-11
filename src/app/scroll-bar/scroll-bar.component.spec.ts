@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ScrollBarComponent } from './scroll-bar.component';
+import { AppModule } from '../app.module';
 
 describe('ScrollBarComponent', () => {
   let component: ScrollBarComponent;
@@ -8,7 +9,7 @@ describe('ScrollBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScrollBarComponent ]
+      imports: [ AppModule ]
     })
     .compileComponents();
   });

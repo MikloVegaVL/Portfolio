@@ -1,0 +1,66 @@
+.development-section {
+  margin: 40px 0;
+
+  > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  color: #212121;
+  overflow: hidden;
+
+  .project-number {
+    font-size: 12px;
+    color: #FF5722;
+    letter-spacing: 0.12em;
+  }
+
+  h3 {
+    margin: 6px 0 12px;
+    font-size: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.skill-group {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  color: #212121;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.8;
+    color: #474040;
+  }
+}
