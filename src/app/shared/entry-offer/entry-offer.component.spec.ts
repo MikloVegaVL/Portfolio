@@ -34,4 +34,12 @@ describe('EntryOfferComponent', () => {
     component.submit();
     expect(component.state).toBe('error');
   });
+
+  it('can be closed and reopened', () => {
+    expect(component.closed).toBeFalse();
+    component.close();
+    expect(component.closed).toBeTrue();
+    component.open();
+    expect(component.closed).toBeFalse();
+  });
 });

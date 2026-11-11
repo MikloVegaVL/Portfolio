@@ -1,4 +1,9 @@
+@if (!closed) {
 <section class="entry-offer">
+  <button type="button"
+          class="entry-offer-close"
+          (click)="close()"
+          [attr.aria-label]="'offer.close' | t">×</button>
   <span class="entry-offer-kicker">{{ 'common.audits' | t }}</span>
   <h2>{{ 'offer.title' | t }}</h2>
   <p class="entry-offer-body">{{ 'offer.body' | t }}</p>
@@ -33,3 +38,8 @@
     <p class="form-message error">{{ 'offer.form.retry' | t }}</p>
   }
 </section>
+} @else {
+  <button type="button" class="entry-offer-reopen" (click)="open()">
+    {{ 'offer.reopen' | t }}
+  </button>
+}

@@ -16,8 +16,17 @@ export class EntryOfferComponent {
   email = '';
   consent = false;
   state: FormState = 'idle';
+  closed = false;
 
   constructor(private language: LanguageService) { }
+
+  close(): void {
+    this.closed = true;
+  }
+
+  open(): void {
+    this.closed = false;
+  }
 
   onUrl(event: Event): void {
     this.url = (event.target as HTMLInputElement).value;

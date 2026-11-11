@@ -78,6 +78,8 @@ export const TRANSLATIONS: Record<Language, Dictionary> = {
     'offer.form.success': 'Danke! Ihre Anfrage ist bereit. Bitte senden Sie die geöffnete E-Mail ab.',
     'offer.form.error': 'Bitte prüfen Sie URL, E-Mail und Zustimmung.',
     'offer.form.retry': 'Senden fehlgeschlagen. Bitte versuchen Sie es erneut.',
+    'offer.close': 'Schließen',
+    'offer.reopen': 'Security-Check anzeigen',
 
     'meta.title': 'Thomas Tritscher – Security Audits',
     'meta.description': 'Security-Audits und Reviews für Web-Anwendungen. Audits & Reviews, Compliance-Beratung und Incident Response.',
@@ -163,6 +165,8 @@ export const TRANSLATIONS: Record<Language, Dictionary> = {
     'offer.form.success': 'Thank you! Your request is ready. Please send the opened email.',
     'offer.form.error': 'Please check URL, email and consent.',
     'offer.form.retry': 'Sending failed. Please try again.',
+    'offer.close': 'Close',
+    'offer.reopen': 'Show security check',
 
     'meta.title': 'Thomas Tritscher – Security Audits',
     'meta.description': 'Security audits and reviews for web applications. Audits & Reviews, compliance consulting and incident response.',
